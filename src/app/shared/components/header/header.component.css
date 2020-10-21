@@ -17,6 +17,7 @@ margin: 1em;
 
 ul > li{
     margin: 1em;
+    user-select: none;
 }
 a{
 text-decoration: none;

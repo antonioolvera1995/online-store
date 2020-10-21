@@ -8,8 +8,16 @@ li{
     margin: 1em;
     color: white;
     height: 1.2em;
-   
+    padding: 0.5em;
+   transition-duration: 150ms;
 }
+
+
+li:hover{
+    
+    color: greenyellow;
+}
+
 
 section{
     display: flex;

@@ -21,7 +21,13 @@ export class HeaderComponent implements OnInit {
       const regex = /^[0-9]*$/;
       if (regex.test(url.substring(url.length - 1))) {
         this.acti = true;
-        this.producto = this.product.getProductActually();
+        try {
+          this.producto = this.product.getProductActually();
+        } catch (error) {
+          console.log(error);
+          
+        }
+        
 
       } else {
         this.acti = false;
