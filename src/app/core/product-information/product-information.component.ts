@@ -14,6 +14,7 @@ export class ProductInformationComponent implements OnInit {
   ruta:number;
   products;
   product;
+  alt:string;
  
   constructor( rut: ActivatedRoute, private productsService:ProducstlistingService) {
       rut.params.subscribe((params) => {
@@ -26,6 +27,12 @@ export class ProductInformationComponent implements OnInit {
   ngOnInit(): void {
     this.productsService.setProductActually(Number(this.ruta));
     this.product = this.productsService.getProductActually();
+
+    //tamaño pantalla
+    let tam = window.innerHeight;
+    console.log(tam);
+    
+    this.alt = `${tam/26.5}em`;
   }
 
 }
