@@ -1,1 +1,8 @@
-<p>products works!</p>
+<section>
+
+    <ul *ngFor="let product of products;  index as i">
+    <li (click)="goToProduct(i)">{{product.name}}</li>
+</ul>
+
+</section>
+

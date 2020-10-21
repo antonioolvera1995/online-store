@@ -3,10 +3,11 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './shared/header/header.component';
-import { FooterComponent } from './shared/footer/footer.component';
+import { HeaderComponent } from './shared/components/header/header.component';
+import { FooterComponent } from './shared/components/footer/footer.component';
 import { InformationComponent } from './core/information/information.component';
 import { ProductsComponent } from './core/products/products.component';
+import { ProductInformationComponent } from './core/product-information/product-information.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ProductsComponent } from './core/products/products.component';
     HeaderComponent,
     FooterComponent,
     InformationComponent,
-    ProductsComponent
+    ProductsComponent,
+    ProductInformationComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,24 @@
+ul{
+
+padding: 1em;
+user-select: none;
+}
+
+li{
+    margin: 1em;
+    color: white;
+    height: 1.2em;
+   
+}
+
+section{
+    display: flex;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    justify-content: flex-start;
+    background-color: rgb(41, 41, 41);
+    position: absolute;
+}
+

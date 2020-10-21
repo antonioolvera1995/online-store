@@ -1,0 +1,12 @@
+
+
+<section>
+
+    <ul >
+    <li>{{product.name}}</li>
+    <li>{{product.precio}}€</li>
+    <li *ngIf="product.tipe==='solido'">{{product.weight}}Kg</li>
+    <li *ngIf="product.tipe==='liquido'">{{product.weight}}L</li>
+    <li>{{product.tipe}}</li>
+</ul>
+</section>

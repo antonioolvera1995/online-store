@@ -1,0 +1,9 @@
+<header>
+    <ul>
+        <li><a [routerLink]="['/information']" routerLinkActive="active" >Información</a></li>
+        <li><a [routerLink]="['/products']" routerLinkActive="active" >Productos</a></li>
+        <li *ngIf="acti"><a class="active">{{producto.name}}</a></li>
+<li></li>
+    </ul>
+
+</header>
