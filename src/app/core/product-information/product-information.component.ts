@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import {ProducstlistingService  } from "src/app/shared/services/producstlisting.service";
+import {ProducstlistingService , Products } from "src/app/shared/services/producstlisting.service";
 import { ActivatedRoute } from '@angular/router';
 
 
@@ -12,8 +12,8 @@ import { ActivatedRoute } from '@angular/router';
 export class ProductInformationComponent implements OnInit {
 
   ruta:number;
-  products;
-  product;
+  products:Products[];
+  product:Products;
   alt:string;
  
   constructor( rut: ActivatedRoute, private productsService:ProducstlistingService) {
@@ -21,7 +21,9 @@ export class ProductInformationComponent implements OnInit {
         this.ruta = Number(params['id']);
     });
 
+    
     this.products =  productsService.getProducts();
+  
   }
 
   ngOnInit(): void {

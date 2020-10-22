@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 //import { timeStamp } from 'console';
-import { ProducstlistingService } from 'src/app/shared/services/producstlisting.service';
+import { ProducstlistingService , Products  } from 'src/app/shared/services/producstlisting.service';
 
 @Component({
   selector: 'app-products',
@@ -11,7 +11,7 @@ import { ProducstlistingService } from 'src/app/shared/services/producstlisting.
 })
 export class ProductsComponent implements OnInit {
 
-  products;
+  products:Products[];
 
   constructor(
     private productService: ProducstlistingService,
@@ -23,7 +23,7 @@ export class ProductsComponent implements OnInit {
     this.products = this.productService.getProducts();
   }
 
-  goToProduct(id) {
+  goToProduct(id:string) {
     this.router.navigate(['/product', id]);
     
   }

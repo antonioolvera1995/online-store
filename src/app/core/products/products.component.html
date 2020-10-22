@@ -1,7 +1,7 @@
 <section>
 
     <ul *ngFor="let product of products;  index as i">
-    <li (click)="goToProduct(i)"><p>{{product.name}}</p></li>
+    <li (click)="goToProduct(i.toString())"><p>{{product.name}}</p></li>
 </ul>
 
 </section>
