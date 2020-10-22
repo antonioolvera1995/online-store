@@ -7,6 +7,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class ProductCardComponent implements OnInit {
   @Input() nombre:string = '';
+  @Input() quantit:string = '';
   @Output() nombreSalida = new EventEmitter<string>();
   constructor() { }
 

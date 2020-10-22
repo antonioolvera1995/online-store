@@ -4,6 +4,7 @@
 
         <app-product-card (click)="goToProduct(i.toString())"  
         [nombre]="product.name"
+        [quantit]="product.quantity" 
         (nombreSalida)="addProducts($event)">
         </app-product-card>
 

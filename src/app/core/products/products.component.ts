@@ -40,9 +40,5 @@ export class ProductsComponent implements OnInit {
       }
     }
 
-    console.clear();
-    for (const item of this.products) {
-      console.log(item.name, item.quantity);
-    }
   }
 }

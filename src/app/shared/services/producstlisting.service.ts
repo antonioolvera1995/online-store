@@ -17,10 +17,10 @@ export class ProducstlistingService {
     { name: 'Cerveza', precio: 0.33, weight: 0.25, tipe: 'liquido', quantity:0 },
     { name: 'Café', precio: 3, weight: 0.15, tipe: 'solido', quantity:0 },
 
-    { name: 'Legia', precio: 1.21, weight: 1, tipe: 'liquido', quantity:0 },
-    { name: 'Manzana', precio: 0.46, weight: 0.2, tipe: 'solido', quantity:0 },
-    { name: 'Pera', precio: 0.43, weight: 0.15, tipe: 'solido', quantity:0 },
-    { name: 'Melon', precio: 1.45, weight: 1.3, tipe: 'solido', quantity:0 },
+    { name: 'Zumo', precio: 1.11, weight: 1, tipe: 'liquido', quantity:0 },
+    { name: 'Banana', precio: 0.66, weight: 0.123, tipe: 'solido', quantity:0 },
+    { name: 'Crema', precio: 2.43, weight: 0.55, tipe: 'solido', quantity:0 },
+    { name: 'Lápiz', precio: 0.15, weight: 0.05, tipe: 'solido', quantity:0 },
   ];
 
   actuallyProduct: Products;
