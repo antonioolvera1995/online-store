@@ -2,7 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 //import { timeStamp } from 'console';
-import { ProducstlistingService , Products  } from 'src/app/shared/services/producstlisting.service';
+import {
+  ProducstlistingService,
+  Products,
+} from 'src/app/shared/services/producstlisting.service';
 
 @Component({
   selector: 'app-products',
@@ -10,9 +13,7 @@ import { ProducstlistingService , Products  } from 'src/app/shared/services/prod
   styleUrls: ['./products.component.css'],
 })
 export class ProductsComponent implements OnInit {
-
-  products:Products[];
-  quantity:string[] = [];
+  products: Products[];
 
   constructor(
     private productService: ProducstlistingService,
@@ -24,14 +25,24 @@ export class ProductsComponent implements OnInit {
     this.products = this.productService.getProducts();
   }
 
-  goToProduct(id:string) {
+  goToProduct(id: string) {
     this.router.navigate(['/product', id]);
-    
   }
 
-  addProducts(produ:string){
-this.quantity.push(produ);
-console.log(produ);
+  addProducts(produ: string) {
+    let block: boolean = false;
 
+    for (let i = 0; i < this.products.length; i++) {
+      const element = this.products[i];
+      if (element.name.toLocaleLowerCase() === produ.toLocaleLowerCase()) {
+        block = true;
+        this.products[i].quantity = element.quantity + 1;
+      }
+    }
+
+    console.clear();
+    for (const item of this.products) {
+      console.log(item.name, item.quantity);
+    }
   }
 }

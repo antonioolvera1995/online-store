@@ -1,11 +1,12 @@
 <section>
 
-
-
     <ul *ngFor="let product of products;  index as i">
+
         <app-product-card (click)="goToProduct(i.toString())"  
         [nombre]="product.name"
-        (nombreSalida)="addProducts($event)"></app-product-card>
+        (nombreSalida)="addProducts($event)">
+        </app-product-card>
+
     </ul>
 
 </section>
