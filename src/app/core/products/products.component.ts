@@ -12,7 +12,7 @@ import { ProducstlistingService , Products  } from 'src/app/shared/services/prod
 export class ProductsComponent implements OnInit {
 
   products:Products[];
-  trolley:string[] = [];
+  quantity:string[] = [];
 
   constructor(
     private productService: ProducstlistingService,
@@ -30,7 +30,7 @@ export class ProductsComponent implements OnInit {
   }
 
   addProducts(produ:string){
-this.trolley.push(produ);
+this.quantity.push(produ);
 console.log(produ);
 
   }
