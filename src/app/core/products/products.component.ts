@@ -12,6 +12,7 @@ import { ProducstlistingService , Products  } from 'src/app/shared/services/prod
 export class ProductsComponent implements OnInit {
 
   products:Products[];
+  trolley:string[] = [];
 
   constructor(
     private productService: ProducstlistingService,
@@ -26,5 +27,11 @@ export class ProductsComponent implements OnInit {
   goToProduct(id:string) {
     this.router.navigate(['/product', id]);
     
+  }
+
+  addProducts(produ:string){
+this.trolley.push(produ);
+console.log(produ);
+
   }
 }

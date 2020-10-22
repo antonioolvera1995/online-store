@@ -1,7 +1,10 @@
 <section>
 
+
+
     <ul *ngFor="let product of products;  index as i">
-    <li (click)="goToProduct(i.toString())"><p>{{product.name}}</p></li>
+        <li (click)="goToProduct(i.toString())"><app-product-card [nombre]="product.name"   (nombreSalida)="addProducts($event)"></app-product-card></li>
+    <!-- <li (click)="goToProduct(i.toString())"><p>{{product.name}}</p></li> -->
 </ul>
 
 </section>

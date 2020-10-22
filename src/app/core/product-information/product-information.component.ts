@@ -32,8 +32,6 @@ export class ProductInformationComponent implements OnInit {
 
     //tamaño pantalla
     let tam = window.innerHeight;
-    console.log(tam);
-    
     this.alt = `${tam/26.5}em`;
   }
 
