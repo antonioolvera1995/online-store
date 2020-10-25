@@ -9,6 +9,8 @@ import { InformationComponent } from './core/information/information.component';
 import { ProductsComponent } from './core/products/products.component';
 import { ProductInformationComponent } from './core/product-information/product-information.component';
 import { ProductCardComponent } from './shared/components/product-card/product-card.component';
+import { SearchResultsComponent } from './core/search-results/search-results.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,11 +20,13 @@ import { ProductCardComponent } from './shared/components/product-card/product-c
     InformationComponent,
     ProductsComponent,
     ProductInformationComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    SearchResultsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

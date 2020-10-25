@@ -10,8 +10,11 @@ import {ProducstlistingService  } from "src/app/shared/services/producstlisting.
 export class HeaderComponent implements OnInit {
   acti: boolean = false;
 
+  textSearch:string = '';
   producto;
-  constructor(private product:ProducstlistingService) {}
+  constructor(private product:ProducstlistingService) {
+    
+  }
 
   ngOnInit(): void {this.activ();}
 
@@ -35,5 +38,9 @@ export class HeaderComponent implements OnInit {
 
     }, 100);
   }
+  
 
+  getSearch(){
+    this.product.textSearch = this.textSearch;
+  }
 }

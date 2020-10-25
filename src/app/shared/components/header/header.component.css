@@ -28,3 +28,16 @@ font-size: 1.2em;
 .active{
     color: greenyellow;
 }
+
+input{
+    display: flex;
+    margin:1em;
+    margin-right: 0em;
+    margin-left: auto;
+}
+
+button{
+    display: flex;
+    margin:1em;
+    margin-left: 0em;
+}

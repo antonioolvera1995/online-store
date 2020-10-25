@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
 
 
 export class ProducstlistingService {
+  public textSearch:string = '';
   products: Products[] = [
     { name: 'Legia', precio: 1.21, weight: 1, tipe: 'liquido', quantity:0 },
     { name: 'Manzana', precio: 0.46, weight: 0.2, tipe: 'solido', quantity:0 },
@@ -38,6 +39,8 @@ export class ProducstlistingService {
   setProductActually(id: number): void {
     this.actuallyProduct = this.products[id];
   }
+
+  
 }
 
 export interface Products {
